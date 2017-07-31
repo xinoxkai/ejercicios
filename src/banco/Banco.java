@@ -25,7 +25,7 @@ public class Banco {
  int selec,C;
  String name;
  double pisto;
- 
+  int i=0;
 do{
  do{
 System.out.println("que accion desea realizar");
@@ -36,7 +36,7 @@ selec = leer.nextInt();
 switch (selec) {
 
 	case 1:
-            int i=0;
+           
 	do {
     
             System.out.println("ingrese el nombre del titular");
@@ -52,10 +52,12 @@ switch (selec) {
             System.out.println("digite el numero \n1-si\n2-no");
             C = leer.nextInt();
             i=i+1;
-            //puede dar error si se ingresa mas del indice del areglo y no se como se condiciona eso
+  
+        } while (  i <= 2 && C==1 );
+            if (i >= 2) {
+                System.out.println("termino el limite de cuentas");
+            }
             
-        } while (C==1);
-
                 break;
                       
             case 2:
@@ -70,7 +72,7 @@ switch (selec) {
    
             cuenta[i].ingresar(pisto);
 
-            System.out.println("desea seguir");
+            System.out.println("desea seguir realizando ingresos a las cuentas");
             System.out.println("digite el numero \n1-si\n2-no");
             C = leer.nextInt();
 
@@ -81,7 +83,7 @@ switch (selec) {
             case 3:
 
                 do{ 
-            System.out.println("seleciones la cuenta en la que se depositara");
+            System.out.println("seleciones la cuenta en la que se desea retirar");
             i = leer.nextInt();
 
 
@@ -90,7 +92,7 @@ switch (selec) {
 
             cuenta[i].retirar(pisto);
 
-            System.out.println("desea seguir");
+            System.out.println("desea seguir haiendo retiro a las cuentas");
             System.out.println("digite el numero \n1-si\n2-no");
             C = leer.nextInt();
 
@@ -114,7 +116,7 @@ switch (selec) {
  } while (selec>=5);
  
  
-             System.out.println("desea seguir");
+             System.out.println("desea seguir realzando acciones");
             System.out.println("digite el numero \n1-si\n2-no");
             C = leer.nextInt();
  
