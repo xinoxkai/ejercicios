@@ -52,6 +52,7 @@ switch (selec) {
             System.out.println("digite el numero \n1-si\n2-no");
             C = leer.nextInt();
             i=i+1;
+            //puede dar error si se ingresa mas del indice del areglo y no se como se condiciona eso
             
         } while (C==1);
 
