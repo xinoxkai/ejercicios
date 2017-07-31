@@ -17,11 +17,11 @@ public class cuentas {
 	double cantidad;
 
 	// Constructor
-	public void cuentas(){
+	public cuentas(){
 
 	}
 	
-	public void cuentas(String name,double cantida)
+	public  cuentas(String name,double cantida)
 	{
 		titular=name;
 
